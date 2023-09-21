@@ -1,0 +1,649 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /* font-family: Cera Pro, sans-serif; */
+}
+
+.head {
+    height: 120px;
+    background: linear-gradient(270deg, #286049 29.17%, rgba(40, 96, 73, 0) 100%);
+    padding: 15px 0px;
+}
+
+.navbarlink {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 1);
+
+}
+
+.navbarlink:after {
+    content: '';
+    background: #8FB845;
+    display: block;
+    position: relative;
+    /* bottom: -3px; */
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbarlink:hover:not(.active-link):after {
+    width: 100% !important;
+
+}
+
+.active-link:after {
+    content: '';
+    background: #8FB845;
+    display: block;
+    color: rgba(255, 255, 255, 1);
+    position: relative;
+    /* bottom: -3px; */
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+.active-link:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.navbarlink:hover:not(.active-link) {
+    color: rgba(255, 255, 255, 1);
+}
+
+
+/* ########## burger checkbox ################# */
+.burger {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+    border: none;
+}
+
+.burger .burgerinput {
+    display: none;
+}
+
+.burger .spanburger {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: rgba(0, 0, 0, 1);
+
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    background-color: rgb(255, 255, 255);
+}
+
+.burger .middlespan {
+    width: 60%;
+    text-align: right;
+}
+
+.burger .spanburger:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.burger .spanburger:nth-of-type(2) {
+    top: 50%;
+    transform: translate(64%, -45%);
+    transform-origin: left center;
+}
+
+.burger .spanburger:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+}
+
+.burger .burgerinput:checked~.spanburger:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+}
+
+.burger .burgerinput:checked~.spanburger:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.burger .burgerinput:checked~.spanburger:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 18px;
+    left: 5px;
+}
+
+
+/* ########## End burger checkbox ################# */
+
+
+.hero-section {
+    background-image: url('../img/careers-hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 425px;
+}
+
+.hero-head {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.02em;
+    color: #286049;
+}
+
+.section1{
+    margin-top: 100px;
+}
+.card{
+    border-radius: 0px;
+    border: none;
+}
+.section1-largetext{
+    padding: 0px 30px 0px 0px;
+}
+.section1-text{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #000000;
+    padding-top: 26px;
+}
+.section1-li{
+   padding-bottom: 30px;
+   padding-left: 100px;
+}
+.career-list-pad{
+    padding-top: 50px;
+}
+.section2linkpad {
+    padding-top: 30px;
+    padding-left: 100px;
+}
+
+.section2-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-decoration: none;
+    color: #000000;
+    border-bottom: 2px solid #8FB845;   
+}
+
+.section2-link:hover {
+    color: #8FB845;
+    border-bottom: 2px solid #286049;
+}
+
+
+
+/* Footer Css  */
+.footer {
+    background-color: #286049;
+    margin-top: 150px;
+}
+
+.call-us {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.p-no {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.email {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+
+}
+
+.e-mail {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.bottom-text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.p-policy {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.seciton4-text-pad {
+    padding-top: 80px;
+}
+
+
+
+
+
+
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1370px !important;
+    }
+}
+
+
+
+@media (min-width: 0px) and (max-width: 320.98px) {
+    .active-link:after {
+        width: 15%;
+    }
+
+    .navbarlink:hover:not(.active-link):after {
+        width: 0% !important;
+    }
+
+    .back-color {
+        background: linear-gradient(270deg, #28664c 29.17%, #7fc0a5 100%);
+        text-align: center;
+        position: relative;
+        z-index: 3;
+    }
+
+    .nav-item {
+        padding: 10px 0;
+    }
+
+    .smallcontainer {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .navbar-brand {
+        padding-left: 20px;
+    }
+
+    .burger {
+        margin-right: 20px;
+    }
+
+    .email-no {
+        flex-direction: column;
+    }
+
+    .p-no {
+        padding-right: 0px !important;
+    }
+
+    .call-us {
+        margin-bottom: 0px;
+    }
+
+    .head {
+        background: linear-gradient(270deg, #28664c 29.17%, #7fc0a5 100%);
+    }
+
+    .hero-head {
+        font-size: 28px;
+    }
+
+ 
+
+    .section4-li {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .padforsmalltop {
+        padding-top: 40px;
+    }
+
+    .padforsmallbtm {
+        padding-bottom: 70px;
+    }
+
+    .section1-largetext{
+        padding: 0px;
+    }
+    .image{
+        text-align: center;
+    }
+    .section1-text{
+        padding-top: 0px;
+        text-align: justify;
+    }
+    .section1-li{
+        padding-left: 0px;
+    }
+    .section2linkpad{
+        padding-left: 0px;
+        padding-bottom: 50px;
+    }
+    .career-list-pad{
+        padding-top: 30px;
+    }
+    .container{
+        padding: 0px 15px !important;
+      }
+
+}
+
+@media (min-width: 320.98px) and (max-width: 375.98px) {
+    .active-link:after {
+        width: 15%;
+    }
+
+    .navbarlink:hover:not(.active-link):after {
+        width: 0% !important;
+    }
+
+    .back-color {
+        background: linear-gradient(270deg, #28664c 29.17%, #7fc0a5 100%);
+        text-align: center;
+        position: relative;
+        z-index: 3;
+    }
+
+    .nav-item {
+        padding: 10px 0;
+    }
+
+    .smallcontainer {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .navbar-brand {
+        padding-left: 20px;
+    }
+
+    .burger {
+        margin-right: 20px;
+    }
+
+    .email-no {
+        flex-direction: column;
+    }
+
+    .p-no {
+        padding-right: 0px !important;
+    }
+
+    .call-us {
+        margin-bottom: 0px;
+    }
+
+    .head {
+        background: linear-gradient(270deg, #28664c 29.17%, #7fc0a5 100%);
+    }
+
+    .hero-head {
+        font-size: 28px;
+    }
+
+
+    .padforsmalltop {
+        padding-top: 40px;
+    }
+
+    .padforsmallbtm {
+        padding-bottom: 70px;
+    }
+    .section1-largetext{
+        padding: 0px;
+    }
+  
+    .image{
+        text-align: center;
+    }
+    .section1-text{
+        padding-top: 0px;
+        text-align: justify;
+    }
+    .section1-li{
+        padding-left: 0px;
+    }
+    .section2linkpad{
+        padding-left: 0px;
+        padding-bottom: 50px;
+    }
+    .career-list-pad{
+        padding-top: 30px;
+    }
+    .container{
+        padding: 0px 15px !important;
+      }
+   
+}
+
+@media (min-width: 375.98px) and (max-width: 425.98px) {
+    .active-link:after {
+        width: 15%;
+    }
+
+    .navbarlink:hover:not(.active-link):after {
+        width: 0% !important;
+    }
+
+    .back-color {
+        background: linear-gradient(270deg, #28664c 29.17%, #7fc0a5 100%);
+        text-align: center;
+        position: relative;
+        z-index: 3;
+    }
+
+    .nav-item {
+        padding: 10px 0;
+    }
+
+    .smallcontainer {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .navbar-brand {
+        padding-left: 20px;
+    }
+
+    .burger {
+        margin-right: 20px;
+    }
+
+    .email-no {
+        flex-direction: column;
+    }
+
+    .p-no {
+        padding-right: 0px !important;
+    }
+
+    .call-us {
+        margin-bottom: 0px;
+    }
+
+    .head {
+        background: linear-gradient(270deg, #28664c 29.17%, #7fc0a5 100%);
+    }
+
+    .hero-head {
+        font-size: 28px;
+    }
+
+    .padforsmalltop {
+        padding-top: 40px;
+    }
+
+    .padforsmallbtm {
+        padding-bottom: 70px;
+    }
+    .section1-largetext{
+        padding: 0px;
+    }
+  
+    .image{
+        text-align: center;
+    }
+    .section1-text{
+        padding-top: 0px;
+        text-align: justify;
+    }
+    .section1-li{
+        padding-left: 0px;
+    }
+    .section2linkpad{
+        padding-left: 0px;
+        padding-bottom: 50px;
+    }
+    .career-list-pad{
+        padding-top: 30px;
+    }
+    .container{
+        padding: 0px 15px !important;
+      }
+  
+
+}
+
+@media (min-width: 425.98px) and (max-width: 992px) {
+    .head {
+        background: linear-gradient(270deg, #28664c 29.17%, #7fc0a5 100%);
+    }
+
+    .active-link:after {
+        width: 10%;
+    }
+
+    .smallcontainer {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .navbar-brand {
+        padding-left: 20px;
+    }
+
+    .burger {
+        margin-right: 20px;
+    }
+
+    .back-color {
+        background: linear-gradient(270deg, #28664c 29.17%, #7fc0a5 100%);
+        text-align: center;
+        position: relative;
+        z-index: 3;
+    }
+
+    .nav-item {
+        padding: 10px 0;
+    }
+
+    .navbarlink:hover:not(.active-link):after {
+        width: 0% !important;
+    }
+
+
+    .padforsmalltop {
+        padding-top: 40px;
+    }
+
+    .padforsmallbtm {
+        padding-bottom: 70px;
+    }
+    .section1-largetext{
+        padding: 0px;
+    }
+
+    .image{
+        display: flex;
+        justify-content: center;
+    }
+    .section1-text{
+        padding-top: 0px;
+    }
+    .section1-li{
+        padding-left: 0px;
+    }
+    .section2linkpad{
+        padding-left: 0px;
+        padding-bottom: 50px;
+    }
+    .foronlymid{
+        display: block !important;
+        margin-bottom: 50px;
+    }
+    .onlyinmid{
+        display: none !important;
+    }
+    .career-list-pad{
+        padding-top: 0px;
+    }
+    .section2linkpad{
+        padding: 0px;
+    }
+
+}
+
+@media (min-width: 992.98px) and (max-width: 1200.98px) {
+    .section1-text{
+        padding-top: 0px;
+    }
+    .career-list-pad{
+        padding-top: 10px;
+    }
+    .section1-largetext{
+        padding: 0px;
+    }
+    .section1-li{
+        padding-bottom: 10px;
+    }
+
+}
+
+@media (min-width: 1200.98px) and (max-width: 1440.98px) {
+
+}
